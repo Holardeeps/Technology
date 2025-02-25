@@ -166,6 +166,13 @@ body {
   border: none;
   cursor: pointer;
 }
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn::after {
+  background-color: #fff;
+}
 
 .header {
   height: 85vh;
