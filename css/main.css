@@ -154,7 +154,7 @@ body {
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: 14px;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
@@ -253,6 +253,7 @@ body {
   position: relative;
 }
 .composition__photo {
+  margin-top: 10rem;
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 2px;
@@ -266,6 +267,7 @@ body {
     float: left;
     position: relative;
     width: 33.333333%;
+    margin-top: 2rem;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
   }
 }
@@ -280,7 +282,7 @@ body {
   }
 }
 .composition__photo--p2 {
-  left: 0;
+  right: 0;
   top: 2rem;
 }
 @media only screen and (max-width: 56.25em) {
@@ -304,7 +306,45 @@ body {
 }
 .composition__photo:hover {
   outline: 0.5rem solid #050872;
-  transform: scale(1.05) translateY(-0.5rem);
+  transform: scale(1.05) translateY(0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+@media only screen and (max-width: 56.25em) {
+  .feature-box {
+    padding: 2rem;
+  }
+}
+.feature-box_-icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #050872, #070335);
+  color: transparent;
+}
+@media only screen and (max-width: 56.25em) {
+  .feature-box_-icon {
+    margin-bottom: 0;
+  }
+}
+.feature-box__text {
+  font-size: 15px;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
 }
 
 .row {
@@ -544,4 +584,31 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon:after {
   top: 0;
   transform: rotate(-135deg);
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15rem 5rem;
+  margin-top: -20vh;
+}
+@media only screen and (max-width: 56.25em) {
+  .section-about {
+    padding: 20rem 0;
+  }
+}
+
+.section-features {
+  padding: 20rem 10rem;
+  background-image: linear-gradient(to right bottom, #050872, #070335);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+@media only screen and (max-width: 56.25em) {
+  .section-features {
+    padding: 10rem 0;
+  }
 }/*# sourceMappingURL=main.css.map */

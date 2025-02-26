@@ -4,6 +4,7 @@
     position: relative;
 
     &__photo{
+        margin-top: 10rem;
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         border-radius: 2px;
@@ -16,6 +17,7 @@
             float: left;
             position: relative;
             width: 33.333333%;
+            margin-top: 2rem;
             box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
         }
 
@@ -30,7 +32,7 @@
         }
 
         &--p2{
-            left: 0;
+            right: 0;
             top: 2rem;
 
             @include respond(tab-port){
@@ -54,8 +56,13 @@
 
         &:hover{
             outline: .5rem solid $color-primary;
-            transform: scale(1.05) translateY(-.5rem);
+            transform: scale(1.05) translateY(.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
         }
+    }
 
+    &:hover &__photo:not(:hover){
+        transform: scale(.95);
     }
 }
